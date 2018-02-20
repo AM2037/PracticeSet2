@@ -10,7 +10,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // PASTE CODE YOU WANT TO TEST HERE
+        int weekday = 5;
+        int weekend = 9;
+        int optimalHours = 7 * 8;
+        int actualHours = weekday;
+        actualHours = actualHours + weekend * 2;
+        int solution = optimalHours - actualHours;
+        display(solution);
 
     }
 
@@ -19,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
      * how these work yet. We'll be covering them in lesson 3.
      */
 
-    public void display(String text) {
+    public void display(String i) {
         TextView t = (TextView) findViewById(R.id.display_text_view);
-        t.setText(text);
+        t.setText(""+i);
     }
 
     public void display(int text) {
@@ -33,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
         display(text);
     }
 
+    /*
     public void display2(String text) {
+
         TextView t = (TextView) findViewById(R.id.display_text_view_2);
         t.setText(text);
     }
@@ -42,4 +50,5 @@ public class MainActivity extends AppCompatActivity {
         TextView t = (TextView) findViewById(R.id.display_text_view_3);
         t.setText(text);
     }
+    */
 }
